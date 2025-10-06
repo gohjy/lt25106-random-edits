@@ -1,4 +1,5 @@
-const readline = require("readline");
+const readline = require("node:readline");
+const process = require("node:process");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -21,6 +22,7 @@ function askGuess() {
     } else {
       console.log("Correct!");
       console.log("Guesses taken: " + counter);
+      rl.close();
     }
   });
 }
